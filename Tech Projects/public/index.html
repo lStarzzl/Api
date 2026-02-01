@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Main Portal</h1>
+<button onclick="login()">Login with Discord</button>
+
+<script>
+function login() {
+  fetch("/api/login")
+    .then(r => r.json())
+    .then(d => window.location.href = d.url);
+}
+</script>
+</body>
+</html>
